@@ -1,0 +1,51 @@
+.customsweet{
+    width: 450px;
+    min-height: 280px;
+    margin-top: 100px;
+}
+.swalerror{
+    background-color: rgba(210, 0, 0, 0.8);
+}
+.swalsuccess{
+    background-color: rgba(0, 210, 153, 0.9);
+}
+.swalwarning{
+    background-color: rgba(255, 177, 0, 0.85);
+}
+.greenone{
+    width: 85%;
+    min-height: 240px;
+    border-radius: 20px;
+    margin-top: -90px;
+}
+.darkerror{
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #3A4A5E 0%, #3A4A5E 100%);
+}
+.darkother{
+    background-image: url(/assets/img/cta-pattern-light.png),linear-gradient(-180deg, #3A4A5E 0%, #3A4A5E 100%);
+}
+.darkone{
+    width: 100%;
+    min-height: 230px;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+}
+.customicon{
+    font-size: 5rem;
+}
+.ctbutton{
+    width: 60%;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+
+.darkbg{
+    background-image: url(/assets/img/cta-pattern-light.png),linear-gradient(-180deg, #3A4A5E 0%, #3A4A5E 100%);
+}
+.lightbg{
+    background-image: url(/assets/img/cta-pattern-light.png),linear-gradient(-180deg, #3A4A5E 0%, #3A4A5E 100%);
+}

@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Http\Resources;
+
+use App\Http\Resources\ShippingMethodResource;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class OrderResource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'status' => $this->status,
+            'voucher' => $this->voucher,
+            'order_number' => $this->order_number,
+            'created_at' => $this->created_at->toDateTimeString(),
+            'subtotal' => $this->subtotal,
+            'user' => $this->user,
+            'total' => $this->total(),
+            // 'subtotal' => $this->subtotal->formatted(),
+            // 'total' => $this->total()->formatted(),
+            'products' => ProductVariationResource::collection(
+                $this->whenLoaded('products')
+            ),
+            'address' => new AddressResource(
+                $this->whenLoaded('address')
+            ),
+            'shippingMethod' => new ShippingMethodResource(
+                $this->whenLoaded('shippingMethod')
+            )
+        ];
+    }
+}

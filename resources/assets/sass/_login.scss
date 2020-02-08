@@ -1,0 +1,363 @@
+.loginwrapper{
+    width: 400px;
+    // height: 300px;
+}
+.topspace{
+    margin-top: 50px;
+}
+.topspacelockscreen{
+    margin-top: 96px;
+}
+/* entire container, keeps perspective */
+.login-container {
+	  -webkit-perspective: 800px;
+   -moz-perspective: 800px;
+     -o-perspective: 800px;
+        perspective: 800px;
+        margin-bottom: 30px;
+}
+/* flip the pane when hovered */
+.login-container:not(.manual-flip):hover .cdwrap,
+.login-container.hover.manual-flip .cdwrap{
+	-webkit-transform: rotateY( 180deg );
+-moz-transform: rotateY( 180deg );
+ -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+.login-container.static:hover .cdwrap,
+.login-container.static.hover .cdwrap {
+	-webkit-transform: none;
+-moz-transform: none;
+ -o-transform: none;
+    transform: none;
+}
+/* flip speed goes here */
+.cdwrap {
+	 -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+     -o-transition: -o-transform .5s;
+        transition: transform .5s;
+-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.loginside, .resetpasswordside {
+	-webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.loginside {
+    z-index: 2;
+}
+/* back, initially hidden pane */
+.resetpasswordside {
+		-webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+     -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+        z-index: 3;
+}
+.login-container, .loginside, .resetpasswordside {
+	width: 100%;
+	// height: 220px;
+}
+.loginside::before, .resetpasswordside::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .05;
+}
+
+
+.defalt {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #d2d2d2 0%, #d2d2d2 100%);
+}
+.american {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #4caf50 0%, #0a3a0c 100%);
+}
+.master {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #ff9800 0%, #614215 100%);
+}
+.visa {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #2196f3 0%, #0a2a44 100%);
+}
+.hipercard {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #f44336 0%, #521915 100%);
+}
+.diners {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #c91313 0%, #470202 100%);
+}
+.unionpay {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, #9c27b0 0%, #220727 100%);
+}
+.discover {
+    background-image: url(/assets/img/cta-pattern-light.png), linear-gradient(-180deg, rgba(209, 209, 209, 0) 0%, #555 100%);
+}
+
+.bottom-danger{
+    background-color: #4a0202;
+}
+.bottom-green{
+    background-color: #0c3d0e;
+}
+.bottom-visa{
+    background-color: #0c2e48;
+}
+.topside{
+    width: 100%;
+    min-height: 240px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+    border-radius: 10px;
+    position: relative;
+    padding: 30px;
+}
+.bottomside{
+    height: 50px;
+    width: 80%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 15px 30px 0 rgba(14, 14, 14, 0.1);
+}
+
+.custominput{
+    background-color: rgba(121, 138, 185, 0.07);
+    display: block;
+    height: 40px;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #495057;
+    background-clip: padding-box;
+    border: none;
+    // box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+     -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+       -o-transition: all 0.30s ease-in-out;
+}
+.custominput:focus{
+    color: #888888;
+    background-color: #CDE7F6;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.custominput::-webkit-input-placeholder {
+    color: #888888;
+    opacity: 1
+}
+
+.custominput:-ms-input-placeholder {
+    color: #888888;
+    opacity: 1
+}
+
+.custominput::-ms-input-placeholder {
+    color: #888888;
+    opacity: 1
+}
+
+.custominput::placeholder {
+    color: #888888;
+    opacity: 1
+}
+
+.loginlogo{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+    margin-top: -80px;
+}
+.llogin{
+    width: 100%;
+    padding: 60px 50px 0 50px;
+    text-align: center;
+}
+.loginform{
+    width: 100%;
+    padding: 20px 50px 0 50px;
+}
+.resetform{
+    width: 100%;
+    height: 300px;
+    padding: 20px 0px 0 8px;
+}
+
+.fliparrow{
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+}
+.loginbtn{
+    position: absolute;
+    bottom: 150px;
+    right: 50px;
+    width: 50%;
+    font-size: 20px;
+}
+.resetbtn{
+    position: absolute;
+    bottom: 80px;
+    right: 50px;
+    width: 50%;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+  
+//   .static {
+//     position: static;
+//     height: 80px;
+//     background-color: #ffc;
+//     border-color: #996;
+//     width: 80%;
+//     background-color: rgb(255, 255, 255);
+//     border-bottom-left-radius: 10px;
+//     border-bottom-right-radius: 10px;
+//     box-shadow: 0 15px 30px 0 rgba(0,0,0,.11);
+//   }
+  
+//   .relative {
+//     position: relative;
+//     background-color: #cfc;
+//     border-color: #696;
+//     opacity: 0.7;
+//     width: 100%;
+//     min-height: 90px;
+//     background-color: rgb(255, 255, 255);
+//     box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+//     border-radius: 10px;
+//     position: relative;
+//     padding: 30px;
+//   }
+  
+//   #rel2 {
+//     top: 1px;
+//     left: 0px;
+//     margin: 0px 50px 0px 50px;
+//   }
+  
+//   #sta1 {
+//     background-color: #ffc;
+//     margin: 0px 50px 0px 50px;
+//   }
+  
+
+
+
+
+
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .loginside, .resetpasswordside{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .resetpasswordside {
+        visibility: hidden;
+        transition:all 0.2s cubic-bezier(.92,.01,.83,.67);
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+    .loginside{
+        z-index: 4;
+    }
+    .login-container:not(.manual-flip):hover .resetpasswordside,
+    .login-container.manual-flip.hover .resetpasswordside{
+        z-index: 5;
+        visibility: visible;
+    }
+}
+
+
+
+
+
+
+
+.loginblock{
+    // background-color: #fff;
+    // border-top-right-radius: 20px;
+    // border-top-left-radius: 20px;
+
+    // border-bottom-left-radius: 20px;
+    background: url(/assets/img/bg.png);
+    height: 591px;
+}
+
+.resetblock{
+    // height: 591px;
+    // // background: url(/assets/img/bg.png);
+    // -webkit-transform: rotate(180deg);
+    // transform: rotate(180deg);
+}
+.resetinner{
+    height: 591px;
+    background: url(/assets/img/bg.png);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.fdata{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    // background-color: coral;
+    padding: 40px 50px 0 50px;
+}
+// .resetblock:before {
+//     content: "";
+//     position: absolute;
+//     width: 200%;
+//     height: 200%;
+//     top: -50%;
+//     left: -50%;
+//     z-index: -1;
+//     background: url(/assets/img/bg.png);
+//     -webkit-transform: rotate(180deg);
+//     transform: rotate(180deg);
+// }
+// .loginblock:after{
+//     content: "";
+//     padding: 10px;
+//     height: 250px;
+//     position: absolute;
+//     width: 98%;
+//     margin-top: 224px;
+//     left: 7px;
+//     border-left: 303px solid transparent;
+//     border-top: 200px solid #fff;
+// }

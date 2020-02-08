@@ -1,0 +1,71 @@
+// Body
+$body-bg: #f5f8fa;
+
+.text-orange {
+    color: #ffc107 !important;
+}
+
+// Typography
+$font-family-sans-serif: "Raleway",
+sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+.el-date-editor.el-input {
+    width: 100% !important;
+}
+
+.el-input__icon {
+    line-height: 29px;
+}
+
+.number-budge {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    color: #ffffff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.modalbluepart {
+    min-height: 60px;
+    width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #394A5C;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+    margin: 0 20px;
+    margin-top: 20px;
+}
+
+.modalwhitepart {
+    min-height: 100px;
+    width: 95%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 9px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+    padding: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.darkerbg {
+    background-color: #f2f4f8;
+}
+
+.flatradious {
+    border-radius: 0px !important;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.faster {
+    -webkit-animation-duration: .5s !important;
+    animation-duration: .5s !important;
+}

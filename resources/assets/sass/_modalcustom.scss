@@ -1,0 +1,44 @@
+.custommodal{
+    width: 450px;
+    min-height: 280px;
+    margin-top: 100px;
+}
+.innerwhite{
+    width: 85%;
+    min-height: 240px;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 20px;
+    margin-top: -90px;
+}
+.outerdark{
+    width: 100%;
+    min-height: 230px;
+    background-image: url(/assets/img/cta-pattern-light.png),linear-gradient(-180deg, #0879ff 0%, #0e71f8 100%);
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+}
+.customicon{
+    font-size: 5rem;
+}
+.ctbutton{
+    width: 60%;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+
+.ctbutton:active{
+    outline: none;
+    border: none;
+}
+.ctbutton:hover{
+    outline: none;
+    border: none;
+}
+.ctbutton:focus{
+    outline: none;
+    border: none;
+}
