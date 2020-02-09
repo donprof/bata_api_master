@@ -14,7 +14,7 @@ class AddVouchepriceidToPromocodesTable extends Migration
     public function up()
     {
         Schema::table('promocodes', function (Blueprint $table) {
-            $table->integer('voucheprice_id')->after('promocode')->unsigned()->index();
+            $table->integer('voucheprice_id')->default(1)->after('promocode')->unsigned()->index();
         });
     }
 

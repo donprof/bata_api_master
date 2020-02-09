@@ -14,7 +14,7 @@ class AddCodeToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->integer('code')->after('slug')->unique();
+            $table->integer('code')->default(1)->after('slug')->unique();
         });
     }
 

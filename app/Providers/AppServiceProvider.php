@@ -6,6 +6,7 @@ use App\Cart\Cart;
 use App\Cart\Payments\Gateway;
 use App\Cart\Payments\Gateways\StripeGateway;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Stripe\Stripe;
 
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Stripe::setApiKey(config('services.stripe.secret'));
+        Schema::defaultStringLength(191);
         Validator::extend('phone_number', function($attribute, $value, $parameters, $validator) {
             return preg_match('/^(25)[4-6]{1}[7]{1}[0-9]{8}/', $value) && strlen($value) >= 12;
         });

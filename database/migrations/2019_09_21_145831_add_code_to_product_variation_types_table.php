@@ -14,7 +14,7 @@ class AddCodeToProductVariationTypesTable extends Migration
     public function up()
     {
         Schema::table('product_variation_types', function (Blueprint $table) {
-            $table->integer('code')->after('colorcode')->unique();
+            $table->integer('code')->default(1)->after('colorcode')->unique();
         });
     }
 

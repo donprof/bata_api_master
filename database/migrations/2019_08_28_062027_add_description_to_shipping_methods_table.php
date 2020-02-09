@@ -14,7 +14,7 @@ class AddDescriptionToShippingMethodsTable extends Migration
     public function up()
     {
         Schema::table('shipping_methods', function (Blueprint $table) {
-            $table->string('description', 100)->after('name');
+            $table->string('description', 100)->default(1)->after('name');
         });
     }
 

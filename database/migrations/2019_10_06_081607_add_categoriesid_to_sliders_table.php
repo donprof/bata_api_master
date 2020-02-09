@@ -14,7 +14,7 @@ class AddCategoriesidToSlidersTable extends Migration
     public function up()
     {
         Schema::table('sliders', function (Blueprint $table) {
-            $table->integer('categoriesid')->after('title')->unsigned()->index();
+            $table->integer('categoriesid')->default(1)->after('title')->unsigned()->index();
         });
     }
 

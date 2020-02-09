@@ -14,7 +14,7 @@ class AddOrderNumberToOrdersTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->string('order_number', 150)->after('status');
+            $table->string('order_number', 150)->default(1)->after('status');
         });
     }
 
