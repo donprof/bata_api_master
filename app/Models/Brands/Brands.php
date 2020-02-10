@@ -12,7 +12,7 @@ class Brands extends Model
 
     public function scopeBrands($query)
     {
-        return $query->whereIn('name', ['SAFARI','TOUGHEES'])->get();
+        return $query->whereIn('name', ['SAFARI','TOUGHEES', 'SANDAK', 'PATA PATA'])->get();
     }
 
     public static function getBrandId($name)
