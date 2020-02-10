@@ -16,6 +16,7 @@ use App\Http\Resources\ProductHomeResource;
 use App\Models\Brands\Brands;
 use App\Models\Category;
 use App\Models\category_product\category_product;
+use App\Models\Logs\Logs;
 use App\Models\ProductVariation;
 use App\Models\ProductVariationType;
 use App\Models\Stock;
@@ -104,8 +105,15 @@ class ProductController extends Controller
         $root = public_path('storage/');
         File::delete($root.$request->iconOldFile1);
         File::delete($root.$request->iconOldFile2);
+        
 
         $product = Product::findOrFail(intval($id));
+
+        Logs::create([
+            'user_id'   => $request->user()->id,
+            'cardlog'   =>'User updated product id: '. $id.' of product code: '.$product->productcode,
+        ]);
+        
         $product->update([
             'name'          => $request->name,
             'slug'          => Str::slug($request->name, '-'),

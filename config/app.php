@@ -110,7 +110,7 @@ return [
     |
     */
 
-    'key' => env('base64:STOHGW5CKBbyMVOtPYQy978/uyoiTz2NP8+Ji51ca5M='),
+    'key' => env('base64:y8bKurfZCGpzoNMYv1sqeOgbK83rP/PQbLkQLVw3FDU='),
 
     'cipher' => 'AES-256-CBC',
 
