@@ -34,7 +34,7 @@ class BannerimagesController extends Controller
 
         if ($request->hasFile('products')) {
             $this->imageManager->make($request->file('products')->getPathName())
-                ->resize(1280, 450, function ($c) {
+                ->resize(1280, 500, function ($c) {
                     $c->aspectRatio();
                 })
                 ->encode('png')

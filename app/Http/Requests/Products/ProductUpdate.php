@@ -26,7 +26,7 @@ class ProductUpdate extends FormRequest
         return [
             'name' => 'required|max:20',
             'price' => 'required | numeric',
-            'description' => 'required|max:50|min:3',
+            'description' => 'required|max:500|min:3',
             // 'icon' => 'required',
             'id' => 'required | numeric | exists:products,id',
         ];
