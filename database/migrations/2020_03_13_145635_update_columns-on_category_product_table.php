@@ -18,6 +18,8 @@ class UpdateColumnsOnCategoryProductTable extends Migration
             $table->integer('product_id')->unsigned()->index();
             $table->integer('parent_id')->unsigned()->index();
             $table->integer('subcategory_id')->unsigned()->index();
+        });
+            Schema::table('category_product', function(Blueprint $table) {
 
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('product_id')->references('id')->on('products');
