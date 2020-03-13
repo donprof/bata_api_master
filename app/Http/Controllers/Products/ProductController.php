@@ -64,7 +64,7 @@ class ProductController extends Controller
 
         if ($products != null) {
             foreach ($products as $value) {
-                DB::insert("INSERT INTO `category_product` (`category_id`, `product_id`) values (1, $value->id)");
+                DB::insert("INSERT INTO `category_product` (`category_id`, `product_id`) values (0, $value->id)");
             }
         }
     }
